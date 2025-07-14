@@ -6,7 +6,7 @@ module.exports = defineConfig({
   timeout: 30000,
   retries: 0,
   use: {
-    headless: false,
+    headless: true,
     screenshot: "only-on-failure",
     video: "retain-on-failure",
     baseURL: "https://www.redmine.org",
