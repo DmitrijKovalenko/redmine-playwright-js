@@ -1,0 +1,2 @@
+Here should be a blank space,not a login :locator('.splitcontentleft ul li:nth-child(1)')
+Here should be a blank space, not an email :locator('.splitcontentleft ul li:nth-child(2)')
