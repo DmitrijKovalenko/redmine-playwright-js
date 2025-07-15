@@ -27,7 +27,7 @@ jobs:
         run: npx playwright test --reporter=line,allure-playwright
 
       - name: Generate Allure report
-        run: npm run allure:generate
+        run: npm run allure:generate || echo "no allure-results"
 
       - name: Upload Allure artifacts
         uses: actions/upload-artifact@v4
