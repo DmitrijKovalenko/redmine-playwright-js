@@ -1,0 +1,55 @@
+# Page snapshot
+
+```yaml
+- list:
+  - listitem:
+    - link "Мій обліковий запис":
+      - /url: /my/account
+  - listitem:
+    - link "Вийти":
+      - /url: /logout
+- text: Увійшов як
+- link "DmytroKovalenko":
+  - /url: /users/723092
+- list:
+  - listitem:
+    - link "Домашня сторінка":
+      - /url: /
+  - listitem:
+    - link "Моя сторінка":
+      - /url: /my/page
+  - listitem:
+    - link "Проекти":
+      - /url: /projects
+  - listitem:
+    - link "Допомога":
+      - /url: https://www.redmine.org/guide
+- link "Пошук":
+  - /url: /search
+- text: ":"
+- textbox "Пошук:"
+- text: Перейти до проекту...
+- heading "Redmine" [level=1]
+- insertion:
+  - iframe
+- heading "Підтвердження" [level=2]
+- paragraph
+- paragraph: Ваш обліковий запис буде повністю видалений без можливості відновлення. Ви впевнені, що бажаете продовжити?
+- paragraph
+- paragraph
+- checkbox "Так"
+- text: Так
+- button "Видалити мій обліковий запис"
+- text: "|"
+- link "Відмінити":
+  - /url: /my/account
+- paragraph
+- text: Powered by
+- link "Redmine":
+  - /url: https://www.redmine.org/
+- text: © 2006-2023 Jean-Philippe Lang
+- log
+- log
+- insertion:
+  - iframe
+```

@@ -1,0 +1,619 @@
+# Page snapshot
+
+```yaml
+- list:
+  - listitem:
+    - link "Sign in":
+      - /url: /login
+  - listitem:
+    - link "Register":
+      - /url: /account/register
+- list:
+  - listitem:
+    - link "Home":
+      - /url: /
+  - listitem:
+    - link "Projects":
+      - /url: /projects
+  - listitem:
+    - link "Help":
+      - /url: https://www.redmine.org/guide
+- link "Search":
+  - /url: /projects/redmine/search?scope=subprojects
+- text: ":"
+- textbox "Search:"
+- text: Redmine
+- heading "Redmine" [level=1]
+- list:
+  - listitem:
+    - link "Overview":
+      - /url: /projects/redmine
+  - listitem:
+    - link "Download":
+      - /url: /projects/redmine/wiki/Download
+  - listitem:
+    - link "Activity":
+      - /url: /projects/redmine/activity
+  - listitem:
+    - link "Roadmap":
+      - /url: /projects/redmine/roadmap
+  - listitem:
+    - link "Issues":
+      - /url: /projects/redmine/issues
+  - listitem:
+    - link "News":
+      - /url: /projects/redmine/news
+  - listitem:
+    - link "Wiki":
+      - /url: /projects/redmine/wiki
+  - listitem:
+    - link "Forums":
+      - /url: /projects/redmine/boards
+  - listitem:
+    - link "Repository":
+      - /url: /projects/redmine/repository
+- heading "Custom queries" [level=3]
+- list:
+  - listitem:
+    - link "Documentation issues":
+      - /url: /projects/redmine/issues?query_id=84
+  - listitem:
+    - link "Open defects":
+      - /url: /projects/redmine/issues?query_id=1
+  - listitem:
+    - link "Open features":
+      - /url: /projects/redmine/issues?query_id=2
+  - listitem:
+    - link "Patch queue":
+      - /url: /projects/redmine/issues?query_id=931
+  - listitem:
+    - link "Plugin issues":
+      - /url: /projects/redmine/issues?query_id=42
+  - listitem:
+    - link "Translation patches":
+      - /url: /projects/redmine/issues?query_id=7
+- insertion:
+  - iframe
+- text: Actions
+- heading "Issues" [level=2]
+- group "Filters":
+  - text: Filters
+  - table:
+    - row "Status closed":
+      - cell "Status":
+        - checkbox "Status" [checked]
+        - text: Status
+      - cell "closed":
+        - combobox:
+          - option "open"
+          - option "is"
+          - option "is not"
+          - option "closed" [selected]
+          - option "any"
+      - cell
+  - text: Add filter
+  - combobox "Add filter":
+    - option [selected]
+    - option "Status" [disabled]
+    - option "Tracker"
+    - option "Priority"
+    - option "Author"
+    - option "Assignee"
+    - option "Target version"
+    - option "Category"
+    - option "Subject"
+    - option "Description"
+    - option "% Done"
+    - option "File"
+    - option "Updated by"
+    - option "Last updated by"
+    - option "Subproject"
+    - option "Resolution"
+    - option "Affected version"
+    - option "Issue"
+- group "Options"
+- paragraph:
+  - link "Apply":
+    - /url: "#"
+  - link "Clear":
+    - /url: /projects/redmine/issues?set_filter=1&sort=
+- table:
+  - rowgroup:
+    - 'row "Check all/Uncheck all # Tracker Status Subject Updated Category"':
+      - cell "Check all/Uncheck all":
+        - checkbox "Check all/Uncheck all"
+      - cell "#":
+        - link "#":
+          - /url: /projects/redmine/issues?c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=subject&c%5B%5D=updated_on&c%5B%5D=category&f%5B%5D=status_id&f%5B%5D=&group_by=&op%5Bstatus_id%5D=c&set_filter=1&sort=id&t%5B%5D=&utf8=%E2%9C%93
+      - cell "Tracker":
+        - link "Tracker":
+          - /url: /projects/redmine/issues?c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=subject&c%5B%5D=updated_on&c%5B%5D=category&f%5B%5D=status_id&f%5B%5D=&group_by=&op%5Bstatus_id%5D=c&set_filter=1&sort=tracker%2Cid%3Adesc&t%5B%5D=&utf8=%E2%9C%93
+      - cell "Status":
+        - link "Status":
+          - /url: /projects/redmine/issues?c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=subject&c%5B%5D=updated_on&c%5B%5D=category&f%5B%5D=status_id&f%5B%5D=&group_by=&op%5Bstatus_id%5D=c&set_filter=1&sort=status%2Cid%3Adesc&t%5B%5D=&utf8=%E2%9C%93
+      - cell "Subject":
+        - link "Subject":
+          - /url: /projects/redmine/issues?c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=subject&c%5B%5D=updated_on&c%5B%5D=category&f%5B%5D=status_id&f%5B%5D=&group_by=&op%5Bstatus_id%5D=c&set_filter=1&sort=subject%2Cid%3Adesc&t%5B%5D=&utf8=%E2%9C%93
+      - cell "Updated":
+        - link "Updated":
+          - /url: /projects/redmine/issues?c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=subject&c%5B%5D=updated_on&c%5B%5D=category&f%5B%5D=status_id&f%5B%5D=&group_by=&op%5Bstatus_id%5D=c&set_filter=1&sort=updated_on%3Adesc%2Cid%3Adesc&t%5B%5D=&utf8=%E2%9C%93
+      - cell "Category":
+        - link "Category":
+          - /url: /projects/redmine/issues?c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=subject&c%5B%5D=updated_on&c%5B%5D=category&f%5B%5D=status_id&f%5B%5D=&group_by=&op%5Bstatus_id%5D=c&set_filter=1&sort=category%2Cid%3Adesc&t%5B%5D=&utf8=%E2%9C%93
+      - cell
+  - rowgroup:
+    - row "43002 Defect Closed RepositoriesSubversionControllerTest fails in 5.1-stable due to missing foo.js in test repository 2025-07-13 03:41 SCM Actions":
+      - cell:
+        - checkbox
+      - cell "43002":
+        - link "43002":
+          - /url: /issues/43002
+      - cell "Defect"
+      - cell "Closed"
+      - cell "RepositoriesSubversionControllerTest fails in 5.1-stable due to missing foo.js in test repository":
+        - link "RepositoriesSubversionControllerTest fails in 5.1-stable due to missing foo.js in test repository":
+          - /url: /issues/43002
+      - cell "2025-07-13 03:41"
+      - cell "SCM"
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42997 Defect Closed Edit custom query doesn't allow column selection 2025-07-10 12:12 Issues filter Actions":
+      - cell:
+        - checkbox
+      - cell "42997":
+        - link "42997":
+          - /url: /issues/42997
+      - cell "Defect"
+      - cell "Closed"
+      - cell "Edit custom query doesn't allow column selection":
+        - link "Edit custom query doesn't allow column selection":
+          - /url: /issues/42997
+      - cell "2025-07-10 12:12"
+      - cell "Issues filter"
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42986 Defect Closed Can't delete a version 2025-07-09 13:58 Website (redmine.org) Actions":
+      - cell:
+        - checkbox
+      - cell "42986":
+        - link "42986":
+          - /url: /issues/42986
+      - cell "Defect"
+      - cell "Closed"
+      - cell "Can't delete a version":
+        - link "Can't delete a version":
+          - /url: /issues/42986
+      - cell "2025-07-09 13:58"
+      - cell "Website (redmine.org)"
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42978 Defect Closed custom theme how to has limited info for Redmine 6 2025-07-09 18:18 Themes Actions":
+      - cell:
+        - checkbox
+      - cell "42978":
+        - link "42978":
+          - /url: /issues/42978
+      - cell "Defect"
+      - cell "Closed"
+      - cell "custom theme how to has limited info for Redmine 6":
+        - link "custom theme how to has limited info for Redmine 6":
+          - /url: /issues/42978
+      - cell "2025-07-09 18:18"
+      - cell "Themes"
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42974 Patch Closed Czech localization update 2025-07-09 01:16 Translations Actions":
+      - cell:
+        - checkbox
+      - cell "42974":
+        - link "42974":
+          - /url: /issues/42974
+      - cell "Patch"
+      - cell "Closed"
+      - cell "Czech localization update":
+        - link "Czech localization update":
+          - /url: /issues/42974
+      - cell "2025-07-09 01:16"
+      - cell "Translations"
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42971 Patch Closed Italian translation update for 6.0-stable 2025-07-13 04:15 Translations Actions":
+      - cell:
+        - checkbox
+      - cell "42971":
+        - link "42971":
+          - /url: /issues/42971
+      - cell "Patch"
+      - cell "Closed"
+      - cell "Italian translation update for 6.0-stable":
+        - link "Italian translation update for 6.0-stable":
+          - /url: /issues/42971
+      - cell "2025-07-13 04:15"
+      - cell "Translations"
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42967 Defect Closed Fields marked as Read-only in a Tracker against a status , disappears from the screen instead of disabling the edit to the filed 2025-07-09 13:57 Issues Actions":
+      - cell:
+        - checkbox
+      - cell "42967":
+        - link "42967":
+          - /url: /issues/42967
+      - cell "Defect"
+      - cell "Closed"
+      - cell "Fields marked as Read-only in a Tracker against a status , disappears from the screen instead of disabling the edit to the filed":
+        - link "Fields marked as Read-only in a Tracker against a status , disappears from the screen instead of disabling the edit to the filed":
+          - /url: /issues/42967
+      - cell "2025-07-09 13:57"
+      - cell "Issues"
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42962 Defect Closed Mail handler fails to create issues from emails over 4MB on Rack >= 3.1.14 2025-07-06 07:30 Email receiving Actions":
+      - cell:
+        - checkbox
+      - cell "42962":
+        - link "42962":
+          - /url: /issues/42962
+      - cell "Defect"
+      - cell "Closed"
+      - cell "Mail handler fails to create issues from emails over 4MB on Rack >= 3.1.14":
+        - link "Mail handler fails to create issues from emails over 4MB on Rack >= 3.1.14":
+          - /url: /issues/42962
+      - cell "2025-07-06 07:30"
+      - cell "Email receiving"
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42953 Defect Closed Replace legacy other download icon with SVG icon 2025-07-06 09:38 UI Actions":
+      - cell:
+        - checkbox
+      - cell "42953":
+        - link "42953":
+          - /url: /issues/42953
+      - cell "Defect"
+      - cell "Closed"
+      - cell "Replace legacy other download icon with SVG icon":
+        - link "Replace legacy other download icon with SVG icon":
+          - /url: /issues/42953
+      - cell "2025-07-06 09:38"
+      - cell "UI"
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42933 Defect Closed Fix N+1 query issue in Wiki history page when loading authors of Wiki content versions 2025-06-30 06:41 Performance Actions":
+      - cell:
+        - checkbox
+      - cell "42933":
+        - link "42933":
+          - /url: /issues/42933
+      - cell "Defect"
+      - cell "Closed"
+      - cell "Fix N+1 query issue in Wiki history page when loading authors of Wiki content versions":
+        - link "Fix N+1 query issue in Wiki history page when loading authors of Wiki content versions":
+          - /url: /issues/42933
+      - cell "2025-06-30 06:41"
+      - cell "Performance"
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42920 Defect Closed Missing icon in attachments upload form 2025-06-30 00:22 Attachments Actions":
+      - cell:
+        - checkbox
+      - cell "42920":
+        - link "42920":
+          - /url: /issues/42920
+      - cell "Defect"
+      - cell "Closed"
+      - cell "Missing icon in attachments upload form":
+        - link "Missing icon in attachments upload form":
+          - /url: /issues/42920
+      - cell "2025-06-30 00:22"
+      - cell "Attachments"
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42912 Defect Closed How to use Redmine 2025-06-23 14:58 Administration Actions":
+      - cell:
+        - checkbox
+      - cell "42912":
+        - link "42912":
+          - /url: /issues/42912
+      - cell "Defect"
+      - cell "Closed"
+      - cell "How to use Redmine":
+        - link "How to use Redmine":
+          - /url: /issues/42912
+      - cell "2025-06-23 14:58"
+      - cell "Administration"
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42911 Defect Closed English is the only available language when installing Redmine 5.1.8 2025-06-24 13:18 Actions":
+      - cell:
+        - checkbox
+      - cell "42911":
+        - link "42911":
+          - /url: /issues/42911
+      - cell "Defect"
+      - cell "Closed"
+      - cell "English is the only available language when installing Redmine 5.1.8":
+        - link "English is the only available language when installing Redmine 5.1.8":
+          - /url: /issues/42911
+      - cell "2025-06-24 13:18"
+      - cell
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42907 Defect Closed Sub tasks and sub projects are using still the old chevron-right icon 2025-06-26 14:16 UI Actions":
+      - cell:
+        - checkbox
+      - cell "42907":
+        - link "42907":
+          - /url: /issues/42907
+      - cell "Defect"
+      - cell "Closed"
+      - cell "Sub tasks and sub projects are using still the old chevron-right icon":
+        - link "Sub tasks and sub projects are using still the old chevron-right icon":
+          - /url: /issues/42907
+      - cell "2025-06-26 14:16"
+      - cell "UI"
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42876 Defect Closed redmine_ai_helper 的配置问题 2025-06-16 10:08 Plugin API Actions":
+      - cell:
+        - checkbox
+      - cell "42876":
+        - link "42876":
+          - /url: /issues/42876
+      - cell "Defect"
+      - cell "Closed"
+      - cell "redmine_ai_helper 的配置问题":
+        - link "redmine_ai_helper 的配置问题":
+          - /url: /issues/42876
+      - cell "2025-06-16 10:08"
+      - cell "Plugin API"
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42875 Defect Closed \"Page not found\" error when saving workflows with many statuses on Rack >= 3.1.14 2025-06-21 08:14 Issues workflow Actions":
+      - cell:
+        - checkbox
+      - cell "42875":
+        - link "42875":
+          - /url: /issues/42875
+      - cell "Defect"
+      - cell "Closed"
+      - cell "\"Page not found\" error when saving workflows with many statuses on Rack >= 3.1.14":
+        - link "\"Page not found\" error when saving workflows with many statuses on Rack >= 3.1.14":
+          - /url: /issues/42875
+      - cell "2025-06-21 08:14"
+      - cell "Issues workflow"
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42860 Defect Closed Email has not delivered to a part of group member after updating a ticket when a ticket was assigned group 2025-06-27 08:55 Email receiving Actions":
+      - cell:
+        - checkbox
+      - cell "42860":
+        - link "42860":
+          - /url: /issues/42860
+      - cell "Defect"
+      - cell "Closed"
+      - cell "Email has not delivered to a part of group member after updating a ticket when a ticket was assigned group":
+        - link "Email has not delivered to a part of group member after updating a ticket when a ticket was assigned group":
+          - /url: /issues/42860
+      - cell "2025-06-27 08:55"
+      - cell "Email receiving"
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42859 Patch Closed Remove custom Redmine::I18n::Backend 2025-06-11 22:31 Code cleanup/refactoring Actions":
+      - cell:
+        - checkbox
+      - cell "42859":
+        - link "42859":
+          - /url: /issues/42859
+      - cell "Patch"
+      - cell "Closed"
+      - cell "Remove custom Redmine::I18n::Backend":
+        - link "Remove custom Redmine::I18n::Backend":
+          - /url: /issues/42859
+      - cell "2025-06-11 22:31"
+      - cell "Code cleanup/refactoring"
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42853 Feature Closed task deletion 2025-06-11 12:38 Actions":
+      - cell:
+        - checkbox
+      - cell "42853":
+        - link "42853":
+          - /url: /issues/42853
+      - cell "Feature"
+      - cell "Closed"
+      - cell "task deletion":
+        - link "task deletion":
+          - /url: /issues/42853
+      - cell "2025-06-11 12:38"
+      - cell
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42839 Defect Closed Downloading .js files from the repository browser fails with a 422 error due to ActionController::InvalidCrossOriginRequest 2025-07-12 11:21 SCM Actions":
+      - cell:
+        - checkbox
+      - cell "42839":
+        - link "42839":
+          - /url: /issues/42839
+      - cell "Defect"
+      - cell "Closed"
+      - cell "Downloading .js files from the repository browser fails with a 422 error due to ActionController::InvalidCrossOriginRequest":
+        - link "Downloading .js files from the repository browser fails with a 422 error due to ActionController::InvalidCrossOriginRequest":
+          - /url: /issues/42839
+      - cell "2025-07-12 11:21"
+      - cell "SCM"
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42818 Defect Closed Unnecessary margin below icons on the board-style projects page 2025-06-05 05:58 UI Actions":
+      - cell:
+        - checkbox
+      - cell "42818":
+        - link "42818":
+          - /url: /issues/42818
+      - cell "Defect"
+      - cell "Closed"
+      - cell "Unnecessary margin below icons on the board-style projects page":
+        - link "Unnecessary margin below icons on the board-style projects page":
+          - /url: /issues/42818
+      - cell "2025-06-05 05:58"
+      - cell "UI"
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42815 Defect Closed Limit available locales to those defined by Redmine itself no longer works 2025-06-11 22:10 I18n Actions":
+      - cell:
+        - checkbox
+      - cell "42815":
+        - link "42815":
+          - /url: /issues/42815
+      - cell "Defect"
+      - cell "Closed"
+      - cell "Limit available locales to those defined by Redmine itself no longer works":
+        - link "Limit available locales to those defined by Redmine itself no longer works":
+          - /url: /issues/42815
+      - cell "2025-06-11 22:10"
+      - cell "I18n"
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42807 Defect Closed Progress Bar in issues list has a border above it 2025-06-11 22:09 Issues list Actions":
+      - cell:
+        - checkbox
+      - cell "42807":
+        - link "42807":
+          - /url: /issues/42807
+      - cell "Defect"
+      - cell "Closed"
+      - cell "Progress Bar in issues list has a border above it":
+        - link "Progress Bar in issues list has a border above it":
+          - /url: /issues/42807
+      - cell "2025-06-11 22:09"
+      - cell "Issues list"
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42797 Defect Closed Loading and waiting icons use legacy icons and overlap filename when attaching files 2025-07-04 08:25 UI Actions":
+      - cell:
+        - checkbox
+      - cell "42797":
+        - link "42797":
+          - /url: /issues/42797
+      - cell "Defect"
+      - cell "Closed"
+      - cell "Loading and waiting icons use legacy icons and overlap filename when attaching files":
+        - link "Loading and waiting icons use legacy icons and overlap filename when attaching files":
+          - /url: /issues/42797
+      - cell "2025-07-04 08:25"
+      - cell "UI"
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+    - row "42794 Patch Closed Hide irrelevant information when printing 2025-07-06 11:04 UI Actions":
+      - cell:
+        - checkbox
+      - cell "42794":
+        - link "42794":
+          - /url: /issues/42794
+      - cell "Patch"
+      - cell "Closed"
+      - cell "Hide irrelevant information when printing":
+        - link "Hide irrelevant information when printing":
+          - /url: /issues/42794
+      - cell "2025-07-06 11:04"
+      - cell "UI"
+      - cell "Actions":
+        - link "Actions":
+          - /url: "#"
+- list:
+  - listitem: « Previous
+  - listitem: "1"
+  - listitem:
+    - link "2":
+      - /url: /projects/redmine/issues?c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=subject&c%5B%5D=updated_on&c%5B%5D=category&f%5B%5D=status_id&f%5B%5D=&group_by=&op%5Bstatus_id%5D=c&page=2&set_filter=1&sort=id%3Adesc&t%5B%5D=&utf8=%E2%9C%93
+  - listitem:
+    - link "3":
+      - /url: /projects/redmine/issues?c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=subject&c%5B%5D=updated_on&c%5B%5D=category&f%5B%5D=status_id&f%5B%5D=&group_by=&op%5Bstatus_id%5D=c&page=3&set_filter=1&sort=id%3Adesc&t%5B%5D=&utf8=%E2%9C%93
+  - listitem: …
+  - listitem:
+    - link "669":
+      - /url: /projects/redmine/issues?c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=subject&c%5B%5D=updated_on&c%5B%5D=category&f%5B%5D=status_id&f%5B%5D=&group_by=&op%5Bstatus_id%5D=c&page=669&set_filter=1&sort=id%3Adesc&t%5B%5D=&utf8=%E2%9C%93
+  - listitem:
+    - link "Next »":
+      - /url: /projects/redmine/issues?c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=subject&c%5B%5D=updated_on&c%5B%5D=category&f%5B%5D=status_id&f%5B%5D=&group_by=&op%5Bstatus_id%5D=c&page=2&set_filter=1&sort=id%3Adesc&t%5B%5D=&utf8=%E2%9C%93
+- text: "(1-25/16710) Per page: 25,"
+- link "50":
+  - /url: /projects/redmine/issues?c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=subject&c%5B%5D=updated_on&c%5B%5D=category&f%5B%5D=status_id&f%5B%5D=&group_by=&op%5Bstatus_id%5D=c&per_page=50&set_filter=1&sort=id%3Adesc&t%5B%5D=&utf8=%E2%9C%93
+- text: ","
+- link "100":
+  - /url: /projects/redmine/issues?c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=subject&c%5B%5D=updated_on&c%5B%5D=category&f%5B%5D=status_id&f%5B%5D=&group_by=&op%5Bstatus_id%5D=c&per_page=100&set_filter=1&sort=id%3Adesc&t%5B%5D=&utf8=%E2%9C%93
+- paragraph:
+  - text: "Also available in:"
+  - link "Atom":
+    - /url: /projects/redmine/issues.atom?c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=subject&c%5B%5D=updated_on&c%5B%5D=category&f%5B%5D=status_id&f%5B%5D=&group_by=&op%5Bstatus_id%5D=c&set_filter=1&sort=id%3Adesc&t%5B%5D=&utf8=%E2%9C%93
+  - text: "|"
+  - link "CSV":
+    - /url: /projects/redmine/issues.csv?c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=subject&c%5B%5D=updated_on&c%5B%5D=category&f%5B%5D=status_id&f%5B%5D=&group_by=&op%5Bstatus_id%5D=c&set_filter=1&sort=id%3Adesc&t%5B%5D=&utf8=%E2%9C%93
+  - text: "|"
+  - link "PDF":
+    - /url: /projects/redmine/issues.pdf?c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=subject&c%5B%5D=updated_on&c%5B%5D=category&f%5B%5D=status_id&f%5B%5D=&group_by=&op%5Bstatus_id%5D=c&set_filter=1&sort=id%3Adesc&t%5B%5D=&utf8=%E2%9C%93
+- text: Powered by
+- link "Redmine":
+  - /url: https://www.redmine.org/
+- text: © 2006-2023 Jean-Philippe Lang
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log: Sort by "Subject"
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- insertion:
+  - iframe
+```
