@@ -10,7 +10,8 @@ jobs:
   test-and-report:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Install Node.js 18
         uses: actions/setup-node@v3
@@ -35,10 +36,15 @@ jobs:
           name: allure-report
           path: allure-report
 
+      - name: Force add allure-report (override .gitignore)
+        run: |
+          git config --global user.email "dmitrijkovalenko86@gmail.com"
+          git config --global user.name "DmitrijKovalenko"
+          git add -f allure-report
+
       - name: Deploy Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./allure-report
           publish_branch: gh-pages
-

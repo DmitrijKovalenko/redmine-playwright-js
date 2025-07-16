@@ -31,7 +31,7 @@ npm run allure:open
 
 Reports are also automatically published via GitHub Pages to the `gh-pages` branch after each push to `master`. You can access the latest report [here](https://dmitrijkovalenko.github.io/redmine-playwright-js/).
 
-## 🧪 Project Structure
+## 🧪  Project Structure
 
 ```
 .
