@@ -1,2 +1,0 @@
-Here should be a blank space,not a login :Login: jplang
-Here should be a blank space, not an email :Email: jp_lang@yahoo.fr
